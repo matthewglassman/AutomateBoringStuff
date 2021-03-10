@@ -6,10 +6,19 @@
 contains both upper and lower cases, 1 digit
 and one special character'''
 
-#TODO: Take in user input and assign to a variable
-password = input("Please type in a strong password")
+#Import Necessary Modules
+import re
 
+#TODO: Take in user input and assign to a variable
+password = input("Please type in a strong password ")
+
+#TODO: Start a function to handle password and check strength
+def passwordStrength(text):
 #TODO: Check input for length equal to or greater than 8.
+	if len(text) >= 8:
+		return(text)
+	else:
+		print("The password you entered does not meet the requirement of having at least 8 characters")
 
 #TODO: Check input for at least one number.
 
@@ -18,3 +27,5 @@ password = input("Please type in a strong password")
 #TODO: Check input for at least 1 upper and 1 lower case alpha character.
 
 #TODO: If input passes all checks send message to user that password is strong.
+
+passwordStrength(password)
