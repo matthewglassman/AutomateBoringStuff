@@ -14,7 +14,7 @@ password = input("Please type in a strong password ")
 
 #TODO: Start a function to handle password and check strength
 def passwordStrength(text):
-	eightOrMore = re.compile(r'[\S]{8,}')
+	eightOrMore = re.compile(r'[\w]{8,}')
 #TODO: Check input for length equal to or greater than 8.
 	if eightOrMore.findall(text) == []:
 		print("The password you entered does not meet the requirement of having at least 8 characters")
@@ -23,7 +23,7 @@ def passwordStrength(text):
 		
 
 #TODO: Check input for at least one number.
-
+	hasADigit = re.compile()
 #TODO: Check input for at least one special character.
 
 #TODO: Check input for at least 1 upper and 1 lower case alpha character.
