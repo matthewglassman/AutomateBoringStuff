@@ -23,12 +23,18 @@ def passwordStrength(text):
 		
 
 #TODO: Check input for at least one number.
-	hasADigit = re.compile(r'[\d{1,}]')
-	if hasADigit.findall(text) == []:
-		print("The password does not meet the requirement of having at least 1 number")
-	else:
-		print("Looks like this password has at least 1 number")
+#	hasADigit = re.compile(r'[\d{1,}]')
+#	if hasADigit.findall(text) == []:
+#		print("The password does not meet the requirement of having at least 1 number")
+#	else:
+#		print("Looks like this password has at least 1 number")
+
 #TODO: Check input for at least one special character.
+	specialCharacter = re.compile(r'[^a-zA-z0-9_ ]{1,}')
+	if specialCharacter.findall(text) == []:
+		print("The password must contain at least 1 special character")
+	else:
+		print("Looks like this password has at least 1 special character")
 
 #TODO: Check input for at least 1 upper and 1 lower case alpha character.
 
