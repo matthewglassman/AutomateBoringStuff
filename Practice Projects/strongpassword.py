@@ -30,13 +30,20 @@ def passwordStrength(text):
 #		print("Looks like this password has at least 1 number")
 
 #TODO: Check input for at least one special character.
-	specialCharacter = re.compile(r'[^a-zA-z0-9_ ]{1,}')
-	if specialCharacter.findall(text) == []:
-		print("The password must contain at least 1 special character")
-	else:
-		print("Looks like this password has at least 1 special character")
+	#specialCharacter = re.compile(r'[^a-zA-z0-9_ ]{1,}')
+#	if specialCharacter.findall(text) == []:
+#		print("The password must contain at least 1 special character")
+#	else:
+#		print("Looks like this password has at least 1 special character")
 
-#TODO: Check input for at least 1 upper and 1 lower case alpha character.
+#TODO: Check input for at least 1 upper case letter
+	lowerCaseCheck = re.compile(r'[a-z]+')
+	if lowerCaseCheck.findall(text) == []:
+		print("The password must contain at least 1 lowercase character")
+	else:
+		print("Looks like this has at least 1 lowercase letter ")
+
+#TODO: Check input for at least 1 lower case alpha character.
 
 #TODO: If input passes all checks send message to user that password is strong.
 
