@@ -44,11 +44,18 @@ def passwordStrength(text):
 #		print("Looks like this has at least 1 lowercase letter")
 
 #TODO: Check input for at least 1 lower case alpha character.
-	upperCaseCheck = re.compile(r'[A-Z]+')
-	if upperCaseCheck.findall(text) == []:
-		print("The password must contain at least 1 uppercase character")
+	#upperCaseCheck = re.compile(r'[A-Z]+')
+#	if upperCaseCheck.findall(text) == []:
+#		print("The password must contain at least 1 uppercase character")
+#	else:
+#		print("Looks like this has at least 1 uppercase letter")
+
+#TODO: Check to make sure there are no spaces in the password
+	spaceCheck = re.compile(r'^[\S]+$')
+	if spaceCheck.findall(text) == []:
+		print("The password may not contain spaces.")
 	else:
-		print("Looks like this has at least 1 uppercase letter")
+		print("Looks like this password contains no spaces.  Good!")
 
 #TODO: If input passes all checks send message to user that password is strong.
 
